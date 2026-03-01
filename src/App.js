@@ -31,8 +31,8 @@ function Board({ xIsNext, squares, onPlay}) {
     }
 
     const winnerInfo = calculateWinner(squares); // (4) now returns object
-    const winner = winnerInfo ? winnerInfo.winner : null; // (4)
-    const winningLine = winnerInfo ? winnerInfo.line : []; // (4)
+    const winner = winnerInfo ? winnerInfo.winner : null;
+    const winningLine = winnerInfo ? winnerInfo.line : [];
 
     let status;
     if (winner) {
@@ -158,4 +158,5 @@ function calculateWinner(squares) {
     }
   }
   return null;
+
 }
